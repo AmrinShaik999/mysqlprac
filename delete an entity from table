@@ -8,5 +8,5 @@ insert into Test(id, name, age) values(5, "amrin", 24);
 
 
 
-delete from Test where age=28;-- Your code here!
+delete from Test where age=28;
 select name, id from Test;
