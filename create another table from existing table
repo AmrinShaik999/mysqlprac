@@ -1,0 +1,31 @@
+create table Test(id integer, name varchar(100) , age  int );
+insert into Test(id, name, age) values(1, "basha", 28);
+insert into Test(id, name, age) values(2, "afrin", 28);
+insert into Test(id, name, age) values(3, "mastanvali", 45);
+insert into Test(id, name, age) values(4, "munni", 55);
+insert into Test(id, name, age) values(5, "amrin", 24);
+
+
+
+
+
+
+update Test set name="ameerunnisa" where id=4;
+
+ALTER TABLE Test
+ADD COLUMN phone VARCHAR(15) AFTER name;
+
+update Test set phone="******4948" where id=5;
+update Test set phone="******4994" where id=4;
+
+update Test set phone="******3203" where id=3;
+update Test set phone="******9077" where id=1;
+update Test set phone="******5180" where id=2;
+
+
+update Test set age=age+1 where age>30 ;update Test set age=age-1 where age<30;
+CREATE TABLE new_test AS
+SELECT id, name, phone
+FROM Test;
+select * from Test;
+select * from new_test;
