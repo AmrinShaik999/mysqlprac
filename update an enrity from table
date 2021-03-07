@@ -1,0 +1,14 @@
+create table Test(id integer, name varchar(100) , age  int );
+insert into Test(id, name, age) values(1, "basha", 28);
+insert into Test(id, name, age) values(2, "afrin", 28);
+insert into Test(id, name, age) values(3, "mastanvali", 45);
+insert into Test(id, name, age) values(4, "munni", 55);
+insert into Test(id, name, age) values(5, "amrin", 24);
+
+
+
+
+delete from Test where age=28:
+
+select name, id from Test;
+update Test set name="ameerunnisa" where id=5
