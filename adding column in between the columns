@@ -16,6 +16,6 @@ ALTER TABLE Test
 ADD COLUMN phone VARCHAR(15) AFTER name;
 
 update Test set phone="******4948" where id=5;
-update Test set phone="******4994" where id=3;
+update Test set phone="******4994" where id=4;
 update Test set phone="******3203" where id=3;
 select * from Test;
