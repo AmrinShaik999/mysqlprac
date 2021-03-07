@@ -4,5 +4,4 @@ insert into Test(id, name, age) values(2, "afrin", 28);
 insert into Test(id, name, age) values(3, "mastanvali", 45);
 insert into Test(id, name, age) values(4, "munni", 55);
 insert into Test(id, name, age) values(5, "amrin", 24);
-
-select * from Test where age=24;
+select name, id from Test where age=24;
