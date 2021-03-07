@@ -1,0 +1,9 @@
+create table Test(id integer, name varchar(100) , age  int );
+insert into Test(id, name, age) values(1, "basha", 28);
+
+insert into Test(id, name, age) values(2, "Afrin", 28);
+
+insert into Test(id, name, age) values(3, "Amrin", 24);
+
+
+select * from Test;
