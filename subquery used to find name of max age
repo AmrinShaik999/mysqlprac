@@ -35,5 +35,5 @@ update new_test set town="nijampatnam" where id=3;
 update new_test set town="vijayawada" where id=4;
 update new_test set town="ponnur" where id=5;
 
-select name from
-    Test where age=(select Max(age) from Test);
+select name from                 #after Query
+    Test where age=(select Max(age) from Test);     #inner Query
