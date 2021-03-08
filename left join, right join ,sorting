@@ -1,0 +1,4 @@
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers #customers is table one
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID #is second table and if both ids are same then perform join
+ORDER BY Customers.CustomerName;  #Order is used for sorting
