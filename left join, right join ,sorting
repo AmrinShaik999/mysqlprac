@@ -1,4 +1,40 @@
-SELECT Customers.CustomerName, Orders.OrderID
-FROM Customers #customers is table one
-LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID #is second table and if both ids are same then perform join
-ORDER BY Customers.CustomerName;  #Order is used for sorting
+
+create table Test(id integer, name varchar(100) , age  int );
+insert into Test(id, name, age) values(1, "basha", 28);
+insert into Test(id, name, age) values(2, "afrin", 28);
+insert into Test(id, name, age) values(3, "mastanvali", 45);
+insert into Test(id, name, age) values(4, "munni", 55);
+insert into Test(id, name, age) values(5, "amrin", 24);
+
+
+
+
+
+
+update Test set name="ameerunnisa" where id=4;
+
+ALTER TABLE Test
+ADD COLUMN phone VARCHAR(15) AFTER name;
+
+update Test set phone="******4948" where id=5;
+update Test set phone="******4994" where id=4;
+
+update Test set phone="******3203" where id=3;
+update Test set phone="******9077" where id=1;
+update Test set phone="******5180" where id=2;
+
+
+update Test set age=age+1 where age>30 ;update Test set age=age-1 where age<30;
+CREATE TABLE new_test(id INTEGER, town varchar(50))
+
+SELECT id
+FROM Test;
+update new_test set town="vadlamudi" where id=1;
+update new_test set town="ponnur" where id=2;
+update new_test set town="nijampatnam" where id=3;
+update new_test set town="vijayawada" where id=4;
+update new_test set town="ponnur" where id=5;
+SELECT Test.name, Test.phone , new_test.id, new_test.town
+FROM Test 
+LEFT JOIN new_test ON Test.id=new_test.id
+ORDER BY Test.age; 
