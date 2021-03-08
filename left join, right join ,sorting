@@ -38,3 +38,7 @@ SELECT Test.name, Test.phone , new_test.id, new_test.town
 FROM Test 
 LEFT JOIN new_test ON Test.id=new_test.id
 ORDER BY Test.age; 
+SELECT Test.name, Test.phone , new_test.id, new_test.town
+FROM new_test 
+RIGHT JOIN Test ON Test.id=new_test.id
+ORDER BY Test.name; 
