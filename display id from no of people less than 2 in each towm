@@ -1,0 +1,25 @@
+update Test set name="ameerunnisa" where id=4;
+
+ALTER TABLE Test
+ADD COLUMN phone VARCHAR(15) AFTER name;
+
+update Test set phone="******4948" where id=5;
+update Test set phone="******4994" where id=4;
+
+update Test set phone="******3203" where id=3;
+update Test set phone="******9077" where id=1;
+update Test set phone="******5180" where id=2;
+
+
+update Test set age=age+1 where age>30 ;update Test set age=age-1 where age<30;
+CREATE TABLE new_test(id INTEGER, town varchar(50))
+
+SELECT id
+FROM Test;
+update new_test set town="vadlamudi" where id=1;
+update new_test set town="ponnur" where id=2;
+update new_test set town="nijampatnam" where id=3;
+update new_test set town="vijayawada" where id=4;
+update new_test set town="ponnur" where id=5;
+
+select id from new_test where town IN (select town from new_test group by town having count(*)<2);
